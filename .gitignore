@@ -2,3 +2,5 @@ venv
 core/__pycache__
 Auth/__pycache__
 Auth/migrations/__pycache__
+Home/__pycache__
+Home/migrations/__pycache__
