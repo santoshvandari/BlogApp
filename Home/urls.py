@@ -1,7 +1,5 @@
-from django.contrib import admin
-from django.urls import path,include
-
+from django.urls import path
+from Home import views
 urlpatterns = [
-    path('',include('Home.urls')),
-    path('',include('Auth.urls')),
+    path('',path('',views.index,name='index')),
 ]
