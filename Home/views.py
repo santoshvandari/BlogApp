@@ -15,3 +15,6 @@ def contact(request):
 
 def team(request):
     return render(request,'team.html')
+
+def blog(request):
+    return render(request,'blog.html')
