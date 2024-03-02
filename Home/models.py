@@ -16,6 +16,11 @@ class Blog(models.Model):
     
     def save(self,*args,**kwargs):
         self.slug=slug_generator(self.title)
-        print("********* received slug in models.")
-        print(self.slug)
         super(Blog,self).save(*args,**kwargs)
+
+class Contact(models.Model):
+    name=models.CharField(max_length=100)
+    email=models.EmailField(max_length=100)
+    subject=models.CharField(max_length=500)
+    message=models.TextField()
+    created_on=models.DateTimeField(auto_now_add=True)
