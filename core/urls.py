@@ -3,13 +3,13 @@ from django.urls import path,include
 from froala_editor import views
 from django.conf import settings
 from django.conf.urls.static import static
+from Home import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('login/', admin.site.urls),
     path('',include('Home.urls')),
-    path('froala_editor/',include('froala_editor.urls'))
+    path('froala_editor/',include('froala_editor.urls')),
 ]
-
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
