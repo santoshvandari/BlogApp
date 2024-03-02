@@ -26,24 +26,30 @@
           <div class="col-lg-8">
             <div class="all-blog-posts">
               <div class="row">
+
+
+
+{% for post in posts %}
                 <div class="col-lg-6">
                   <div class="blog-post">
                     <div class="blog-thumb">
-                      <img src="/static/img/blog-1-720x480.jpg" alt="">
+                      <img src="/media/{{blog.image}}">
                     </div>
                     <div class="down-content">
-                      <a href="blog-details.html"><h4>Lorem Ipsum Dolor Sit Amet, Consectetur Adipisicing Elit</h4></a>
-                      
-                      <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.</p>
-
+                      <a href="blog/{{blog.slug}}"><h4>{{blog.title}}</h4></a>
                       <ul class="post-info">
-                        <li><a href="#">John Doe</a></li>
-                        <li><a href="#">10.07.2020 10:20</a></li>
-                        <li><a href="#"><i class="fa fa-comments" title="Comments"></i> 12</a></li>
+                        <li>{{blog.author.username}}</li>
+                <li>{{ blog.created_on|date:"F j, Y" }}</li>
                       </ul>
                     </div>
                   </div>
                 </div>
+{% endfor %}
+
+
+
+
+{% comment %} 
                 <div class="col-lg-6">
                   <div class="blog-post">
                     <div class="blog-thumb">
@@ -134,6 +140,11 @@
                     </div>
                   </div>
                 </div>
+ {% endcomment %}
+
+
+
+
                 <div class="col-lg-12">
                   <ul class="page-numbers">
                     <li><a href="#">1</a></li>
