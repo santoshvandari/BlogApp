@@ -33,13 +33,13 @@
                 <div class="col-lg-6">
                   <div class="blog-post">
                     <div class="blog-thumb">
-                      <img src="/media/{{blog.image}}">
+                      <img src="/media/{{post.image}}">
                     </div>
                     <div class="down-content">
-                      <a href="blog/{{blog.slug}}"><h4>{{blog.title}}</h4></a>
+                      <a href="blog/{{post.slug}}"><h4>{{post.title}}</h4></a>
                       <ul class="post-info">
-                        <li>{{blog.author.username}}</li>
-                <li>{{ blog.created_on|date:"F j, Y" }}</li>
+                        <li>{{post.author.username}}</li>
+                <li>{{ post.created_on|date:"F j, Y" }}</li>
                       </ul>
                     </div>
                   </div>
