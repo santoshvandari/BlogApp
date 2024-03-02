@@ -40,5 +40,12 @@ def blog(request):
 
 def blogpost(request,slug):
     blog=Blog.objects.filter(slug=slug).first()
-    context={'blog':blog}
+    if blog is None:
+        return render(request,'404.html')
+    posts=Blog.objects.all().order_by('created_on')[:4]
+    context={'blog':blog,'posts':posts}
     return render(request,'blogpost.html',context)
+
+
+def custom_404(request, exception):
+    return render(request, '404.html', status=404)

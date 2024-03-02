@@ -15,3 +15,9 @@ if settings.DEBUG:
 
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+handler404 = 'Home.views.custom_404'
+
+admin.site.site_title = "Blog Website Portal"
+admin.site.site_header = "Blog Website"
+admin.site.index_title = "Welcome to Blog Website Portal"
