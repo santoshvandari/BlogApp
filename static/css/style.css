@@ -52,7 +52,7 @@ h1,h2,h3,h4,h5,h6 {
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-image: url(../images/banner-image-1-1920x300.jpg);
+	background-image: url('/static/img/banner-image-1-1920x300.jpg');
 }
 
 .page-heading:after {
@@ -378,7 +378,7 @@ header .navbar {
 
 .call-to-action .main-content {
 	padding: 40px;
-	background-image: url(../images/cta-bg.jpg);
+	background-image: url('/static/img/cta-bg.jpg');
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;

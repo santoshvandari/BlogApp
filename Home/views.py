@@ -28,7 +28,6 @@ def contact(request):
 
 
 def blog(request):
-
     blog_list = Blog.objects.all()
     paginator = Paginator(blog_list, 6)  # Show 6 blogs per page
     page_number = request.GET.get('page')
