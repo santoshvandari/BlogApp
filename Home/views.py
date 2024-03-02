@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from Home.models import Contact
+from Home.models import Contact,Blog
 
 # Create your views here.
 def index(request):
@@ -26,3 +26,9 @@ def team(request):
 
 def blog(request):
     return render(request,'blog.html')
+
+
+def blogpost(request,slug):
+    blog=Blog.objects.filter(slug=slug).first()
+    context={'blog':blog}
+    return render(request,'blogpost.html',context)
