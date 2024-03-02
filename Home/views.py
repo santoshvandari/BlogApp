@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from Home.models import Contact,Blog
+from django.core.paginator import Paginator
 
 # Create your views here.
 def index(request):
@@ -28,10 +29,13 @@ def contact(request):
 
 def blog(request):
 
-    posts=Blog.objects.all().order_by('created_on')
-    context={'posts':posts}
-
-
+    blog_list = Blog.objects.all()
+    paginator = Paginator(blog_list, 6)  # Show 6 blogs per page
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    context = {
+        'posts': page_obj,
+    }
     return render(request,'blog.html',context)
 
 
