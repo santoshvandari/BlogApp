@@ -27,6 +27,10 @@ def contact(request):
 
 
 def blog(request):
+
+
+
+    
     return render(request,'blog.html')
 
 

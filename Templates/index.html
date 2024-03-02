@@ -33,7 +33,7 @@
       <br>
       <div class="row">
 
-        {% for blog in blogs %}
+        {% for blog in blogs|slice:"6:11" %}
 
         <div class="col-md-4 col-sm-6">
           <div class="blog-post">
@@ -50,42 +50,7 @@
             </div>
           </div>
         </div>
-
         {% endfor %}
-
-
-
-
-
-
-        <div class="col-md-4 col-sm-6">
-          <div class="blog-post">
-            <div class="blog-thumb">
-              <img src="/static/img/blog-5-720x480.jpg">
-            </div>
-            <div class="down-content">
-              <a href="blog-details.html"><h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h4></a>
-              <ul class="post-info">
-                <li><a href="#">John Doe</a></li>
-                <li><a href="#">10.07.2020 10:20</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="blog-post">
-            <div class="blog-thumb">
-              <img src="/static/img/blog-6-720x480.jpg" alt="">
-            </div>
-            <div class="down-content">
-              <a href="blog-details.html"><h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h4></a>
-              <ul class="post-info">
-                <li><a href="#">John Doe</a></li>
-                <li><a href="#">10.07.2020 10:20</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
