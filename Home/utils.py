@@ -2,7 +2,7 @@ from django.utils.text import slugify
 import string,random
 
 def random_string_generator(N):
-    res = ''.join(random.choices(string.ascii_uppercase + string.digits, k = N))
+    res = ''.join(random.choices(string.ascii_uppercase, k = N))
     return res
 
 
@@ -10,12 +10,7 @@ def random_string_generator(N):
 def slug_generator(text):
     from Home.models import Blog
     slug=slugify(text)
-    blog=Blog.objects.filter(slug=slug).exists()
-    if blog:
+    if Blog.objects.filter(slug=slug).exists():
         text=text+random_string_generator(5)
-        slug_generator(text)
+        return slug_generator(text)
     return slug
-
-
-
-
