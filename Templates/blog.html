@@ -155,11 +155,12 @@
                     </div>
                     <div class="content">
                       <ul>
-                        {% for post in posts %}
+                        {% for post in posts|slice:":4" %}
                         <li><a href="/blog/{{post.slug}}">
                           <h5>{{post.title}}</h5>
                           <span>{{ post.created_on|date:"F j, Y" }}</span>
                         </a></li>
+                        {% endfor %}
                       </ul>
                     </div>
                   </div>
@@ -175,20 +176,21 @@
       </div>
     </section>
     
+    {% comment %} 
+    
+    
+    <div class="item">
+      <img src="/media/{{blog.image}}" height='480px' width='720px'>
+      <div class="item-content">    
+        <div class="main-content">
+          <a href="/blog/{{blog.slug}}"><h4>{{blog.title}}</h4></a>
+          <ul class="post-info">
+            <li>{{blog.author.username}}</li>
+            <li>Created : {{blog.created_on}}</li>
+            <li>Updated : {{blog.updated_on}}</li>
+          </ul>
+        </div>
+      </div>
+    </div> {% endcomment %}
+
 {% endblock maincontent %}
-{% comment %} 
-
-
-<div class="item">
-  <img src="/media/{{blog.image}}" height='480px' width='720px'>
-  <div class="item-content">    
-    <div class="main-content">
-      <a href="/blog/{{blog.slug}}"><h4>{{blog.title}}</h4></a>
-      <ul class="post-info">
-        <li>{{blog.author.username}}</li>
-        <li>Created : {{blog.created_on}}</li>
-        <li>Updated : {{blog.updated_on}}</li>
-      </ul>
-    </div>
-  </div>
-</div> {% endcomment %}
