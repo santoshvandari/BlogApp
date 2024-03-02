@@ -3,7 +3,12 @@ from Home.models import Contact,Blog
 
 # Create your views here.
 def index(request):
-    return render(request,'index.html')
+    # get all the blgos and sort it by created date on latest on top 
+    blogs=Blog.objects.all().order_by('created_on')
+    for blog in blogs:
+        print(blog.author.username)
+    context={'blogs':blogs}
+    return render(request,'index.html',context)
 
 
 def about(request):
@@ -20,9 +25,6 @@ def contact(request):
         contact.save()
     return render(request,'contact.html')
 
-
-def team(request):
-    return render(request,'team.html')
 
 def blog(request):
     return render(request,'blog.html')

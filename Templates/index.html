@@ -5,124 +5,22 @@
 <div class="main-banner header-text">
   <div class="container-fluid">
     <div class="owl-banner owl-carousel">
+      
+      {% for blog in blogs|slice:":5" %}
       <div class="item">
-        <img src="/static/img/blog-1-720x480.jpg" alt="">
-        <div class="item-content">
-          
-          <div class="main-content">
-            <div class="meta-category">
-              <span>Fashion</span>
+          <img src="/media/{{blog.image}}" height='480px' width='720px'>
+          <div class="item-content">    
+            <div class="main-content">
+              <a href="/blog/{{blog.slug}}"><h4>{{blog.title}}</h4></a>
+              <ul class="post-info">
+                <li>{{blog.author.username}}</li>
+                <li>Created : {{blog.created_on}}</li>
+                <li>Updated : {{blog.updated_on}}</li>
+              </ul>
             </div>
-
-            <a href="car-details.html"><h4>Lorem ipsum dolor sit amet.</h4></a>
-
-            <ul class="post-info">
-              <li>John Doe</li>
-              <li>22.07.2020 14:20</li>
-              <li>12 comments</li>
-            </ul>
-          </div>
-        
-        </div>
-      </div>
-      <div class="item">
-        <img src="/static/img/blog-2-720x480.jpg" alt="">
-        <div class="item-content">
-          
-          <div class="main-content">
-            <div class="meta-category">
-              <span>Nature</span>
-            </div>
-
-            <a href="car-details.html"><h4>Lorem ipsum dolor sit amet.</h4></a>
-
-            <ul class="post-info">
-              <li>John Doe</li>
-              <li>22.07.2020 14:20</li>
-              <li>12 comments</li>
-            </ul>
-          </div>
-        
-        </div>
-      </div>
-      <div class="item">
-        <img src="/static/img/blog-3-720x480.jpg" alt="">
-        <div class="item-content">
-          
-          <div class="main-content">
-            <div class="meta-category">
-              <span>Sport</span>
-            </div>
-
-            <a href="car-details.html"><h4>Lorem ipsum dolor sit amet.</h4></a>
-
-            <ul class="post-info">
-              <li>John Doe</li>
-              <li>22.07.2020 14:20</li>
-              <li>12 comments</li>
-            </ul>
-          </div>
-        
-        </div>
-      </div>
-      <div class="item">
-        <img src="/static/img/blog-4-720x480.jpg" alt="">
-        <div class="item-content">
-          
-          <div class="main-content">
-            <div class="meta-category">
-              <span>Entertainment</span>
-            </div>
-
-            <a href="car-details.html"><h4>Lorem ipsum dolor sit amet.</h4></a>
-
-            <ul class="post-info">
-              <li>John Doe</li>
-              <li>22.07.2020 14:20</li>
-              <li>12 comments</li>
-            </ul>
-          </div>
-        
-        </div>
-      </div>
-      <div class="item">
-        <img src="/static/img/blog-5-720x480.jpg" alt="">
-        <div class="item-content">
-          
-          <div class="main-content">
-            <div class="meta-category">
-              <span>Lifestyle</span>
-            </div>
-
-            <a href="car-details.html"><h4>Lorem ipsum dolor sit amet.</h4></a>
-
-            <ul class="post-info">
-              <li>John Doe</li>
-              <li>22.07.2020 14:20</li>
-              <li>12 comments</li>
-            </ul>
-          </div>
-        
-        </div>
-      </div>
-      <div class="item">
-        <img src="/static/img/blog-6-720x480.jpg" alt="">
-        <div class="item-content">
-          <div class="main-content">
-            <div class="meta-category">
-              <span>Sport</span>
-            </div>
-
-            <a href="car-details.html"><h4>Lorem ipsum dolor sit amet.</h4></a>
-
-            <ul class="post-info">
-              <li>John Doe</li>
-              <li>22.07.2020 14:20</li>
-              <li>12 comments</li>
-            </ul>
           </div>
         </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </div>
@@ -134,38 +32,42 @@
       <h2 class="text-center">Blog</h2>
       <br>
       <div class="row">
+
+        {% for blog in blogs %}
+
         <div class="col-md-4 col-sm-6">
           <div class="blog-post">
             <div class="blog-thumb">
-              <img src="/static/img/blog-4-720x480.jpg" alt="">
+              <img src="/media/{{blog.image}}" height='480px' >
             </div>
             <div class="down-content">
-              <a href="blog-details.html"><h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h4></a>
-              
-              <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.</p>
-
+              <a href="/blog/{{blog.slug}}"><h4>{{blog.title}}</h4></a>
               <ul class="post-info">
-                <li><a href="#">John Doe</a></li>
-                <li><a href="#">10.07.2020 10:20</a></li>
-                <li><a href="#"><i class="fa fa-comments" title="Comments"></i> 12</a></li>
+                <li>{{blog.author.username}}</li>
+                <li>{{blog.created_on}}</li>
+                <li>{{blog.updated_on}}</li>
               </ul>
             </div>
           </div>
         </div>
+
+        {% endfor %}
+
+
+
+
+
+
         <div class="col-md-4 col-sm-6">
           <div class="blog-post">
             <div class="blog-thumb">
-              <img src="/static/img/blog-5-720x480.jpg" alt="">
+              <img src="/static/img/blog-5-720x480.jpg">
             </div>
             <div class="down-content">
               <a href="blog-details.html"><h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h4></a>
-              
-              <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.</p>
-
               <ul class="post-info">
                 <li><a href="#">John Doe</a></li>
                 <li><a href="#">10.07.2020 10:20</a></li>
-                <li><a href="#"><i class="fa fa-comments" title="Comments"></i> 12</a></li>
               </ul>
             </div>
           </div>
@@ -177,36 +79,10 @@
             </div>
             <div class="down-content">
               <a href="blog-details.html"><h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h4></a>
-              
-              <p>Nullam nibh mi, tincidunt sed sapien ut, rutrum hendrerit velit. Integer auctor a mauris sit amet eleifend.</p>
-
               <ul class="post-info">
                 <li><a href="#">John Doe</a></li>
                 <li><a href="#">10.07.2020 10:20</a></li>
-                <li><a href="#"><i class="fa fa-comments" title="Comments"></i> 12</a></li>
               </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="call-to-action">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="main-content">
-          <div class="row">
-            <div class="col-lg-8">
-              <span>Lorem ipsum dolor sit amet.</span>
-              <h4>Sed doloribus accusantium reiciendis et officiis.</h4>
-            </div>
-            <div class="col-lg-4">
-              <div class="main-button">
-                <a href="contact.html">Contact Us</a>
-              </div>
             </div>
           </div>
         </div>
