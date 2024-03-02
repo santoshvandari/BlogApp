@@ -28,10 +28,11 @@ def contact(request):
 
 def blog(request):
 
+    posts=Blog.objects.all().order_by('created_on')
+    context={'posts':posts}
 
 
-    
-    return render(request,'blog.html')
+    return render(request,'blog.html',context)
 
 
 def blogpost(request,slug):

@@ -14,8 +14,8 @@
               <a href="/blog/{{blog.slug}}"><h4>{{blog.title}}</h4></a>
               <ul class="post-info">
                 <li>{{blog.author.username}}</li>
-                <li>Created : {{blog.created_on}}</li>
-                <li>Updated : {{blog.updated_on}}</li>
+                <li>Created : {{ blog.created_on|date:"F j, Y" }}</li>
+                <li>Updated : {{ blog.updated_on|date:"F j, Y" }}</li>
               </ul>
             </div>
           </div>
@@ -44,8 +44,7 @@
               <a href="/blog/{{blog.slug}}"><h4>{{blog.title}}</h4></a>
               <ul class="post-info">
                 <li>{{blog.author.username}}</li>
-                <li>{{blog.created_on}}</li>
-                <li>{{blog.updated_on}}</li>
+                <li>{{ blog.created_on|date:"F j, Y" }}</li>
               </ul>
             </div>
           </div>
