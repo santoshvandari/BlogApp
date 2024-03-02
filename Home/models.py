@@ -1,5 +1,6 @@
 from django.db import models
 from froala_editor.fields import FroalaField
+from Home.utils import slug_generator
 
 # Create your models here.
 class Blog(models.Model):
@@ -12,3 +13,7 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.title
+    
+    def save(self,*args,**kwargs):
+        self.slug=slug_generator(self.title)
+        super(Blog,self).save(*args,**kwargs)
