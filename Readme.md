@@ -2,6 +2,12 @@
 ## Introduction
 This is the web based application for Posting the Blog. It is developed using the technologies like HTML, CSS, JS and BootStrap in frontend and python(django Framework) in backend as well as sqlite database(default) as a database.
 
+#### Home Page 
+![Home Page](/img/home.png)
+
+#### Admin Page 
+![Admin Page](/img/admin.png)
+
 ## Features
 The Web app has the following features.
  - A new User can Create the Blog.
