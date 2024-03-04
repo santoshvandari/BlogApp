@@ -1,6 +1,6 @@
 # Blog App
 ## Introduction
-This is the web based application for Posting the Blog. It is developed using the technologies like HTML, CSS, JS and BootStrap in frontend and python(django Framework) in backend as well as sqlite database(default) as a database.
+This is the web-based application for Posting the Blog. It is developed using technologies like HTML, CSS, JS, BootStrap and Jquery in frontend and Python (Django Framework) in the backend as well as SQLite database(default) as a database.
 
 #### Home Page 
 ![Home Page](/img/home.png)
@@ -11,9 +11,9 @@ This is the web based application for Posting the Blog. It is developed using th
 ## Features
 The Blog app has the following features.
  - A new User can Create the Blog.
- - Visitor can view the Posted Blog.
+ - Visitors can view the Posted Blog.
  - User can delete and modify the existing Blog.
- - User can add new User if he/she holds that permission.
+ - The user can add a new User if he/she holds that permission.
 
 ## Usages
 You System must have the following things to use this Blog App.
