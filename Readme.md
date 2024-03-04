@@ -9,14 +9,14 @@ This is the web based application for Posting the Blog. It is developed using th
 ![Admin Page](/img/admin.png)
 
 ## Features
-The Web app has the following features.
+The Blog app has the following features.
  - A new User can Create the Blog.
  - Visitor can view the Posted Blog.
  - User can delete and modify the existing Blog.
  - User can add new User if he/she holds that permission.
 
 ## Usages
-You System must have the following things to use this project.
+You System must have the following things to use this Blog App.
  - Installation of `python` and  `pip`
 
     Python is available for every platform. Download it according to you os. You can download it from [Here.](https://www.python.org/downloads/)
@@ -58,10 +58,10 @@ Follow the mentioned procedure to run this project in your local system.
  ```
 
 ## Contributing
-We welcome contributions! If you'd like to contribute to this project, please check out our [Contribution Guidelines](Contribution.md).
+We welcome contributions! If you'd like to contribute to this Blog app, please check out our [Contribution Guidelines](Contribution.md).
 
 ## Code of Conduct
-Please review our [Code of Conduct](CodeOfConduct.md) before participating in this project.
+Please review our [Code of Conduct](CodeOfConduct.md) before participating in this app.
 
 ## License
 This project is licensed under the [License](LICENSE).
