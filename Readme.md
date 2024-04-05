@@ -41,12 +41,18 @@ Follow the mentioned procedure to run this project in your local system.
 ```bash
     pip install -r requirements.txt
 ```
+ - Make the Migrations and Migrate the Model
+ ```bash
+    # For making the Migrations
+    python3 manage.py makemigrations
+    # For Migrating the Model 
+    python3 manage.py migrate
+```
  - Create Super User
 ```bash 
     python3 manage.py createsuperuser
     #Fill the Required Information
 ```
-
  - Run the Server
 ```bash
     python3 manage.py runserver #FOr Linux User
