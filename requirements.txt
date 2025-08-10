@@ -3,3 +3,4 @@ django-froala-editor
 django-jazzmin
 django-js-asset
 pillow
+gunicorn
